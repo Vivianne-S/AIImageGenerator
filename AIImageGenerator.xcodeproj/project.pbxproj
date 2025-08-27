@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		60A99E6F2E5F26F50095F533 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 60A99E6E2E5F26E20095F533 /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		60A99E522E5F26BD0095F533 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		60A99E442E5F26BD0095F533 /* AIImageGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIImageGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A99E512E5F26BD0095F533 /* AIImageGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIImageGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A99E5B2E5F26BD0095F533 /* AIImageGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIImageGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60A99E6E2E5F26E20095F533 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		60A99E3B2E5F26BD0095F533 = {
 			isa = PBXGroup;
 			children = (
+				60A99E6E2E5F26E20095F533 /* .gitignore */,
 				60A99E462E5F26BD0095F533 /* AIImageGenerator */,
 				60A99E542E5F26BD0095F533 /* AIImageGeneratorTests */,
 				60A99E5E2E5F26BD0095F533 /* AIImageGeneratorUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A99E6F2E5F26F50095F533 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
