@@ -4,6 +4,11 @@
 //
 //  Created by Vivianne Sonnerborg on 2025-08-27.
 //
+//  This service handles generating images using the Stability AI API.
+//  It constructs and sends a POST request with the user's prompt,
+//  handles network errors, parses the JSON response, and converts
+//  the returned Base64 image data into a UIImage for use in the app.
+//
 
 import Foundation
 import UIKit

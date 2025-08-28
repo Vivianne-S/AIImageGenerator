@@ -3,6 +3,13 @@
 //
 //  Created by Vivianne Sonnerborg on 2025-08-27.
 //
+//  This ViewModel manages the state and logic for generating images
+//  using the ImageGeneratorService. It handles user prompts, stores
+//  generated images, tracks loading and error states, and manages
+//  the currently selected image. It is designed to be used with SwiftUI
+//  views and updates the UI reactively via @Published properties.
+//
+
 
 import Foundation
 import SwiftUI
