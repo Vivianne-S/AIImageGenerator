@@ -4,7 +4,13 @@
 //
 //  Created by Vivianne Sonnerborg on 2025-08-27.
 //
+//  The main SwiftUI view for the AI Image Generator app.
+//  It provides a user interface for entering text prompts, generating images,
+//  displaying generated images in a scrollable list, and saving images to Photos.
+//  The view manages loading states, error messages, and selected images,
+//  and leverages the ImageGeneratorViewModel for business logic and image generation.
 //
+
 
 import SwiftUI
 import UIKit
@@ -19,7 +25,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                // Gradient background
                 LinearGradient(
                     colors: [Color.blue, Color.purple],
                     startPoint: .topLeading,
@@ -27,7 +32,6 @@ struct ContentView: View {
                 )
                 .ignoresSafeArea()
                 
-                // White translucent circles
                 Circle()
                     .fill(Color.white.opacity(0.2))
                     .frame(width: 150, height: 150)
@@ -38,7 +42,7 @@ struct ContentView: View {
                     .frame(width: 200, height: 200)
                     .offset(x: 150, y: 250)
                 
-                // Main content
+                /// Main content
                 VStack(spacing: 20) {
                     TextField("Enter prompt...", text: $prompt)
                         .textFieldStyle(.roundedBorder)
@@ -65,13 +69,13 @@ struct ContentView: View {
                     }
                     .padding(.horizontal)
                     
-                    // Loading indicator
+                    /// Loading indicator
                     if viewModel.isLoading {
                         ProgressView()
                             .padding()
                     }
                     
-                    // Generated images
+                    /// Generated images
                     ScrollView {
                         LazyVStack(spacing: 16) {
                             ForEach(viewModel.generatedImages) { item in
@@ -84,7 +88,7 @@ struct ContentView: View {
                                         .shadow(radius: 5)
                                         .padding(.bottom)
                                     
-                                    // Download button on each image
+                                    /// Download button on each image
                                     Button(action: {
                                         selectedImage = item.image
                                         saveImageToPhotos(item.image)
@@ -103,7 +107,7 @@ struct ContentView: View {
                         }
                     }
                     
-                    // Error message
+                    /// Error message
                     if let error = viewModel.errorMessage {
                         Text(error)
                             .foregroundColor(.red)
@@ -134,7 +138,7 @@ struct ContentView: View {
     }
 }
 
-// Helper för att spara bilder
+// Helper to save images 
 class ImageSaver: NSObject {
     private var completion: ((Bool, Error?) -> Void)?
     

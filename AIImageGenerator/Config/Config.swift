@@ -1,3 +1,15 @@
+//
+//  Config.swift
+//  AIImageGenerator
+//
+//  Created by Vivianne Sonnerborg on 2025-08-27.
+//
+//  Provides configuration values for the app, including the API key for Stability AI.
+//  The API key is first retrieved from environment variables (useful for testing)
+//  and then from Info.plist (or xcconfig) if not found. If no key is available,
+//  an empty string is returned and a warning is printed.
+//
+
 import Foundation
 
 

@@ -4,12 +4,17 @@
 //
 //  Created by Vivianne Sonnerborg on 2025-08-27.
 //
+//  This service handles generating images using the Stability AI API.
+//  It constructs and sends a POST request with the user's prompt,
+//  handles network errors, parses the JSON response, and converts
+//  the returned Base64 image data into a UIImage for use in the app.
+//
 
 import Foundation
 import UIKit
 
 
-// Network errors that can occur during image generation
+/// Network errors that can occur during image generation
 enum NetworkError: Error {
     case invalidURL
     case noData
@@ -17,6 +22,7 @@ enum NetworkError: Error {
     case missingAPIKey
 }
 
+/// Generates an image based on a text prompt.
 class ImageGeneratorService {
     private let apiKey = Config.stabilityAIKey
     private let apiUrl = "https://api.stability.ai/v1/generation/stable-diffusion-xl-1024-v1-0/text-to-image"
@@ -95,13 +101,13 @@ class ImageGeneratorService {
                 return
             }
             
-            // Debug: skriv ut en del av svaret
+   
             if let responseString = String(data: data, encoding: .utf8)?.prefix(200) {
                 print("Response preview: \(responseString)...")
             }
             
             do {
-                // Stability AI API returnerar vanligtvis JSON med base64-encoded bilder
+       
                 let jsonResponse = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
                 
                 if let artifacts = jsonResponse?["artifacts"] as? [[String: Any]],
