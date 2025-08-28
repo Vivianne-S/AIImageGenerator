@@ -13,15 +13,15 @@ Features:
 
 Screenshots:
 
-<img width="1290" height="2796" alt="IMG_2360" src="https://github.com/user-attachments/assets/1eed734b-55ef-43c3-ad3f-6d2660a5c97a" />
 Main screen with prompt field and Generate button
+<img width="1290" height="2796" alt="IMG_2360" src="https://github.com/user-attachments/assets/1eed734b-55ef-43c3-ad3f-6d2660a5c97a" />
 
-
+Generated image and download button
 <img width="1290" height="2796" alt="IMG_2356" src="https://github.com/user-attachments/assets/a09440dc-9a70-4bc0-a6af-c1da5a2b0c33" />
 <img width="1024" height="1024" alt="IMG_2357" src="https://github.com/user-attachments/assets/219b6586-a7db-4da8-bc21-f997fe1f8bc5" />
 <img width="1024" height="1024" alt="IMG_2358" src="https://github.com/user-attachments/assets/41642b49-960d-48aa-a862-6eff62bd86f1" />
 <img width="1290" height="2796" alt="IMG_2359" src="https://github.com/user-attachments/assets/e82550e5-d4d4-4c2e-ab20-a9083cf9f30a" />
-Generated image and download button
+
 
 Requirements:
 	•	Xcode 15.5 or later
